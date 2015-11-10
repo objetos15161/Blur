@@ -20,12 +20,15 @@ public class barra extends Actor
     }    
     public void caer()
     {
+        int x=getX();
         blurWorld mundo=(blurWorld)getWorld();
         vel=mundo.dameVel();
         this.setLocation(getX(),getY()+vel);
         if(getY()>mundo.getHeight()-10)
+        {
             mundo.removeObject(this);
-            mundo.creaBarra();
+            //mundo.creaBarra(x,50);
+        }
             
     }
 }

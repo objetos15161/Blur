@@ -19,9 +19,9 @@ public class esferaAzul extends Actor
      */
     public void act() 
     {
-
         mueve();
         golpear();
+    
 
     }
 
@@ -59,15 +59,15 @@ public class esferaAzul extends Actor
         }
 
     } 
-      public void golpear()
+    public void golpear()
     {
         World mundo=getWorld();
-        explosion e= new explosion();
+       
         int x=getX(),y=getY();
         if(isTouching(barra.class))
         {
             mundo.removeObject(this);
-            mundo.addObject(e,x,y);
+            mundo.addObject( new explosionAzul(),x,y);
         }
             
     }

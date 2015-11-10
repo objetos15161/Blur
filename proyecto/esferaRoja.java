@@ -21,6 +21,7 @@ public class esferaRoja extends Actor
     {
 
         mueve();
+        golpear();
 
     }
 
@@ -34,7 +35,7 @@ public class esferaRoja extends Actor
     }
     
     public void mueve()
-    { golpear();
+    { 
         blurWorld mundo= (blurWorld)getWorld();
         vel=mundo.dameVel();
         if ( Greenfoot.isKeyDown("left"))
@@ -59,12 +60,12 @@ public class esferaRoja extends Actor
     public void golpear()
     {
         World mundo=getWorld();
-        explosion e= new explosion();
+
         int x=getX(),y=getY();
         if(isTouching(barra.class))
         {
             mundo.removeObject(this);
-            mundo.addObject(e,x,y);
+            mundo.addObject(new explosionRoja(),x,y);
         }
             
     }
