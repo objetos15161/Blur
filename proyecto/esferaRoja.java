@@ -37,6 +37,7 @@ public class esferaRoja extends Actor
     public void mueve()
     { 
         blurWorld mundo= (blurWorld)getWorld();
+       
         vel=mundo.dameVel();
         if ( Greenfoot.isKeyDown("left"))
         {
@@ -64,17 +65,14 @@ public class esferaRoja extends Actor
         int x=getX(),y=getY();
         blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
        HealthBar healthBar=blurworld.getHealthBar();
-      /** if(touchingBarra==false)
-       {
-          // healthBar.loseHealth();
-           touchingBarra=true;
-          
-        }*/
+    
         if(isTouching(barra.class))
         {
             mundo.removeObject(this);
+            Greenfoot.delay(5);
              healthBar.loseHealth();
-            mundo.addObject( new explosionAzul(),x,y);
+            mundo.addObject( new explosionRoja(),x,y);
+           
              if(healthBar.health<=0)
            {
            Greenfoot.stop();

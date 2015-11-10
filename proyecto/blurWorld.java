@@ -35,8 +35,8 @@ public class blurWorld extends World
         esferaRoja eRoja=new esferaRoja();
         llenaElementos();
         addObject(reloj,189,16);
-        addObject ( eAzul, (ROWS/2)-60, (COLS/2)+220);
-        addObject( eRoja, (ROWS/2)+60, (COLS/2)+220);
+        addObject ( eAzul, 188, 461);
+        addObject( eRoja, 212, 579);
         addObject(healthBar,67,18);
        
         tiempo.mark();
@@ -94,15 +94,7 @@ public class blurWorld extends World
     }
      
  
-    public void started()
-    {
-          //sound.playLoop();
-    }
- 
-    public void stopped()
-    {
-       // sound.stop();
-    }
+    
     public int dameVel()
     {
         return vel;

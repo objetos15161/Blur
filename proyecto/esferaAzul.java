@@ -22,16 +22,18 @@ public class esferaAzul extends Actor
     {
         mueve();
         golpear();
-    
-
+  
+   
+          
     }
     public esferaAzul()
     {
         /**CODIGO PARA HACER LA IMAGEN MAS GRANDE
          GreenfootImage myImage=getImage();
-        int myNewHeight=(int)myImage.getHeight()*2;
-        int myNewWidth=(int)myImage.getWidth()*2;
-        myImage.scale(myNewWidth, myNewHeight);*/
+        int myNewHeight=(int)myImage.getHeight()/2;
+        int myNewWidth=(int)myImage.getWidth()/2;
+        myImage.scale(myNewWidth, myNewHeight);
+            */  
     }
 
     public void orbitWorldCenter()
@@ -71,7 +73,6 @@ public class esferaAzul extends Actor
     public void golpear()
     {
         World mundo=getWorld();
-        
         int x=getX(),y=getY();
         blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
        HealthBar healthBar=blurworld.getHealthBar();

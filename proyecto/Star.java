@@ -33,5 +33,7 @@ public class Star extends Actor
            int y=Greenfoot.getRandomNumber(getWorld().getHeight());
            setLocation(x,y);
         }
+        
+       
     }    
 }
