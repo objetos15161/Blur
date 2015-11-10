@@ -25,6 +25,14 @@ public class esferaAzul extends Actor
     
 
     }
+    public esferaAzul()
+    {
+        /**CODIGO PARA HACER LA IMAGEN MAS GRANDE
+         GreenfootImage myImage=getImage();
+        int myNewHeight=(int)myImage.getHeight()*2;
+        int myNewWidth=(int)myImage.getWidth()*2;
+        myImage.scale(myNewWidth, myNewHeight);*/
+    }
 
     public void orbitWorldCenter()
     {

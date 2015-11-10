@@ -42,6 +42,12 @@ public class Counter extends Actor
     public Counter()
     {
         this(new String());
+        //para cmabiar el tamaño del counter(mas grande)
+        GreenfootImage myImage=getImage();
+        int myNewHeight=(int)myImage.getHeight()*2;
+        int myNewWidth=(int)myImage.getWidth()*2;
+        myImage.scale(myNewWidth, myNewHeight);
+        //termina codigo de agrandar imagen
     }
 
     /**

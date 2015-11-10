@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Nov 09 22:56:13 CST 2015
+#Mon Nov 09 23:25:52 CST 2015
 target12.editor.height=744
 target10.editor.width=900
 target2.width=100
@@ -167,6 +167,7 @@ dependency12.to=explosionAzul
 target3.editor.width=900
 target7.y=10
 target7.x=160
+class.Star.superclass=greenfoot.Actor
 target2.editor.height=700
 dependency18.type=UsesDependency
 class.circulo.superclass=greenfoot.Actor
@@ -250,7 +251,6 @@ dependency18.to=SimpleTimer
 class.Message.superclass=greenfoot.Actor
 dependency13.from=blurWorld
 dependency9.type=UsesDependency
-class.blurWorld.image=bella_ilusalong_backg.jpg
 target3.editor.height=700
 target6.width=80
 target7.naviview.expanded=true

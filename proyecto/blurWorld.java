@@ -40,8 +40,26 @@ public class blurWorld extends World
         addObject(healthBar,67,18);
        
         tiempo.mark();
-        //creaBarra();
         
+        //para hacer  estrellas
+        
+        GreenfootImage img=new GreenfootImage(ROWS,COLS);
+        img.fill();
+        setBackground(img);
+        addStars(500);
+        //acaba codigo de crear estrellas
+       
+        
+    }
+    
+    public void addStars(int howMany)
+    { //para hacer que las estrellas se muevan
+        for(int s=0;s<howMany;s++){
+            int x=Greenfoot.getRandomNumber(getWidth());
+            int y=Greenfoot.getRandomNumber(getHeight());
+            addObject(new Star(),x,y);
+            
+        }
     }
     public HealthBar getHealthBar()//regresa algo cuando le pega a algo
     {
