@@ -13,6 +13,7 @@ public class esferaAzul extends Actor
     int rotationalSpeed = 5;
     int radius = 60; // adjust as needed
     private int vel;
+
     /**
      * Act - do whatever the esferaRoja wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -62,12 +63,22 @@ public class esferaAzul extends Actor
     public void golpear()
     {
         World mundo=getWorld();
-       
+        
         int x=getX(),y=getY();
+        blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
+       HealthBar healthBar=blurworld.getHealthBar();
+     
+    
         if(isTouching(barra.class))
         {
             mundo.removeObject(this);
+             healthBar.loseHealth();
+             
             mundo.addObject( new explosionAzul(),x,y);
+             if(healthBar.health<=0)
+           {
+           Greenfoot.stop();
+            }
         }
             
     }

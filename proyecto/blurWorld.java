@@ -20,7 +20,8 @@ public class blurWorld extends World
     private SimpleTimer tiempo=new SimpleTimer();
     private Reloj reloj=new Reloj();
     barra b=new barra();
-
+    HealthBar healthBar=new HealthBar();
+    
     /**
      * Constructor for objects of class blurWorld.
      * 
@@ -36,11 +37,18 @@ public class blurWorld extends World
         addObject(reloj,189,16);
         addObject ( eAzul, (ROWS/2)-60, (COLS/2)+220);
         addObject( eRoja, (ROWS/2)+60, (COLS/2)+220);
-        
+        addObject(healthBar,67,18);
+       
         tiempo.mark();
         //creaBarra();
         
     }
+    public HealthBar getHealthBar()//regresa algo cuando le pega a algo
+    {
+        return healthBar;
+    }
+    
+  
     public void act()
     {
         if(Greenfoot.getRandomNumber(100)<10)

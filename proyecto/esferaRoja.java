@@ -59,14 +59,26 @@ public class esferaRoja extends Actor
     } 
     public void golpear()
     {
-        World mundo=getWorld();
-
+           World mundo=getWorld();
+        
         int x=getX(),y=getY();
+        blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
+       HealthBar healthBar=blurworld.getHealthBar();
+      /** if(touchingBarra==false)
+       {
+          // healthBar.loseHealth();
+           touchingBarra=true;
+          
+        }*/
         if(isTouching(barra.class))
         {
             mundo.removeObject(this);
-            mundo.addObject(new explosionRoja(),x,y);
-        }
-            
+             healthBar.loseHealth();
+            mundo.addObject( new explosionAzul(),x,y);
+             if(healthBar.health<=0)
+           {
+           Greenfoot.stop();
+            }
+        } 
     }
 }
