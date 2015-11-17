@@ -1,20 +1,19 @@
 import greenfoot.*;
 
 /**
- * Write a description of class explosionAzul here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class explosionAzul extends Actor
+public class ExplosionAzul extends Actor
 {
     GifImage myGif=new GifImage("explosionAzul.gif");
-    /**
-     * Act - do whatever the explosion wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-  public void act()
-        {    
-            setImage(myGif.getCurrentImage());
-        }
+     /** Metodo para activar una imagen Giff!! */
+    public void act()
+    {    
+        setImage(myGif.getCurrentImage());
+        ((BlurWorld)getWorld()).reInicia();
+    }
 }

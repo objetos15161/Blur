@@ -1,19 +1,19 @@
 import greenfoot.*;
 
 /**
- * Write a description of class esferaAzul here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class esferaAzul extends Actor
+public class EsferaAzul extends Actor
 {
     static private final int ROWS = 400;
     static private final int COLS = 600;
-    int rotationalSpeed = 5;
+    int rotationalSpeed = 5; /** inicializa la velocidad de rotacion */
     int radius = 60; // adjust as needed
     private int vel;
-
     /**
      * Act - do whatever the esferaRoja wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,24 +21,13 @@ public class esferaAzul extends Actor
     public void act() 
     {
         mueve();
-        golpear();
-  
-   
-          
-    }
-    public esferaAzul()
-    {
-        /**CODIGO PARA HACER LA IMAGEN MAS GRANDE
-         GreenfootImage myImage=getImage();
-        int myNewHeight=(int)myImage.getHeight()/2;
-        int myNewWidth=(int)myImage.getWidth()/2;
-        myImage.scale(myNewWidth, myNewHeight);
-            */  
-    }
 
+
+    }
+     /**Base para que los objetos giren  */
     public void orbitWorldCenter()
     {
-        blurWorld mundo= (blurWorld)getWorld();
+        BlurWorld mundo= (BlurWorld)getWorld();
         vel=(mundo.dameVel());
 
         setLocation((ROWS/2) ,(COLS/2)+220);
@@ -46,11 +35,12 @@ public class esferaAzul extends Actor
         move(radius);
         turn(90);
     }
-
+     /**A partir de la base se crea el metodo para que giren con las teclas indicadas  */
     public void mueve()
     {
-        blurWorld mundo= (blurWorld)getWorld();
-        vel=(mundo.dameVel());
+        BlurWorld mundo= (BlurWorld)getWorld();
+
+        vel=mundo.dameVel()+1;
         int t=5;
         if ( Greenfoot.isKeyDown("left"))
         {
@@ -70,25 +60,15 @@ public class esferaAzul extends Actor
         }
 
     } 
+     /**Este metodo es llamado por cualquiera de las barras para que explote la esfera  */
     public void golpear()
     {
-        World mundo=getWorld();
+        BlurWorld mundo=(BlurWorld)getWorld();
         int x=getX(),y=getY();
-        blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
-       HealthBar healthBar=blurworld.getHealthBar();
-     
-    
-        if(isTouching(barra.class))
-        {
-            mundo.removeObject(this);
-             healthBar.loseHealth();
-             
-            mundo.addObject( new explosionAzul(),x,y);
-             if(healthBar.health<=0)
-           {
-           Greenfoot.stop();
-            }
-        }
-            
+
+        mundo.removeObject(this);
+        mundo.addObject( new ExplosionAzul(),x,y);
+        mundo.iniTiExp();
+
     }
 }

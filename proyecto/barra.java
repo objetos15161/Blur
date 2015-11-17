@@ -1,27 +1,29 @@
 import greenfoot.*;
 
 /**
- * Write a description of class barra here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class barra extends Actor
+public class Barra extends Actor
 {
-    /**
-     * Act - do whatever the barra wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     private int vel;
     public void act() 
     {
         // Add your action code here.
+
+        golpear();
         caer();
+
     }    
+     /**Mueve el obstaculo hacia abajo y lo borra cuando llega al fondo  */
     public void caer()
     {
         int x=getX();
-        blurWorld mundo=(blurWorld)getWorld();
+        BlurWorld mundo=(BlurWorld)getWorld();
         vel=mundo.dameVel();
         this.setLocation(getX(),getY()+vel);
         if(getY()>mundo.getHeight()-10)
@@ -29,6 +31,22 @@ public class barra extends Actor
             mundo.removeObject(this);
             //mundo.creaBarra(x,50);
         }
+
+    }
+     /**Si toca una esfera roja se pida al mundo la identidad de esa esfera y se activa el metodo golpear en los objestos tipo esfera  */
+    public void golpear()
+    {
+        BlurWorld mundo=(BlurWorld)getWorld();
+        if(isTouching(EsferaAzul.class))
+        {
             
+            (mundo.getAzul()).golpear();
+        }
+        if(isTouching(EsferaRoja.class))
+        {
+            (mundo.getRoja()).golpear();
+
+        }
+
     }
 }

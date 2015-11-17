@@ -1,30 +1,26 @@
 import greenfoot.*;
-
 /**
- * Write a description of class esferaRoja here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class esferaRoja extends Actor
+public class EsferaRoja extends Actor
 {
     static private final int ROWS = 400;
     static private final int COLS = 600;
     int rotationalSpeed = 5;
     int radius = 60;
     int vel;// adjust as needed
-    /**
-     * Act - do whatever the esferaRoja wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+     /**lo mismo que la esfera azul pero en roja  */
+  
+     public void act() 
     {
 
         mueve();
-        golpear();
 
     }
-
     public void orbitWorldCenter()
     {
 
@@ -33,12 +29,11 @@ public class esferaRoja extends Actor
         move(radius);
         turn(90);
     }
-    
+
     public void mueve()
     { 
-        blurWorld mundo= (blurWorld)getWorld();
-       
-        vel=mundo.dameVel();
+        BlurWorld mundo= (BlurWorld)getWorld();
+        vel=mundo.dameVel()+1;
         if ( Greenfoot.isKeyDown("left"))
         {
             int rotationalSpeed =-vel;
@@ -55,28 +50,18 @@ public class esferaRoja extends Actor
             move(radius);
             turn(-90);
         }
-        
 
     } 
     public void golpear()
     {
-           World mundo=getWorld();
-        
+        BlurWorld mundo=(BlurWorld)getWorld();
+
         int x=getX(),y=getY();
-        blurWorld blurworld=(blurWorld)mundo;//para entrar al healthbar del blurworld
-       HealthBar healthBar=blurworld.getHealthBar();
-    
-        if(isTouching(barra.class))
-        {
-            mundo.removeObject(this);
-            Greenfoot.delay(5);
-             healthBar.loseHealth();
-            mundo.addObject( new explosionRoja(),x,y);
-           
-             if(healthBar.health<=0)
-           {
-           Greenfoot.stop();
-            }
-        } 
+
+        mundo.removeObject(this);
+        mundo.addObject(new ExplosionRoja(),x,y);
+        mundo.iniTiExp();      
+
     }
 }
+

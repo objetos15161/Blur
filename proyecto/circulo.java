@@ -1,12 +1,13 @@
 import greenfoot.*;
 
 /**
- * Write a description of class circulo here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class circulo extends Actor
+public class Circulo extends Actor
 {
     /**
      * Act - do whatever the circulo wants to do. This method is called whenever
@@ -16,4 +17,12 @@ public class circulo extends Actor
     {
         // Add your action code here.
     }    
+
+    public void circulo()
+    {
+        GreenfootImage myImage=getImage();
+        int myNewHeight=(int)myImage.getHeight()/2;
+        int myNewWidth=(int)myImage.getWidth()/2;
+        myImage.scale(myNewWidth, myNewHeight);
+    }
 }

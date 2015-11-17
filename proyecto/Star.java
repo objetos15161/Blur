@@ -3,17 +3,14 @@ import java.awt.Color;
 /**
  * Write a description of class Star here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Kevin Rowan (from you tube)
+ * 
  */
 public class Star extends Actor
 {
-    /**
-     * Act - do whatever the Star wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+   
     
-    private static final int SIZE=3;
+    private static final int SIZE=2;
     private int speed;
     
     public Star()
@@ -23,7 +20,7 @@ public class Star extends Actor
        img.setColor(new Color(colour,colour,colour));
        img.fillOval(0,0,SIZE,SIZE);
        setImage(img);
-       speed=Greenfoot.getRandomNumber(5)+1;
+       speed=Greenfoot.getRandomNumber(2)+1;
     }
     public void act() 
     {

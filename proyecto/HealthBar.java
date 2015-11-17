@@ -3,8 +3,8 @@ import java.awt.Color;
 /**
  * Write a description of class HealthBar here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jim Stewart
+ * 
  */
 public class HealthBar extends Actor
 {
@@ -31,9 +31,9 @@ public class HealthBar extends Actor
     {   if(health==3){
        setImage(new GreenfootImage(healthBarWidth+2,healthBarHeight+2));
        GreenfootImage myImage=getImage();
-       myImage.setColor(Color.GREEN);
+       myImage.setColor(Color.WHITE);
        myImage.drawRect(0,0,healthBarWidth+1,healthBarHeight+1);
-       myImage.setColor(Color.GREEN);
+       myImage.setColor(Color.WHITE);
        myImage.fillRect(1,1,health*pixelsPerHealthPoint,healthBarHeight);
     }
      if(health==2){

@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+	import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 import java.awt.Font;
 import java.awt.Color;
 /**

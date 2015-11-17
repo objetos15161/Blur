@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=lo\ mismo\ que\ la\ esfera\ azul\ ,\ pues\ la\ hereda
+comment1.params=
+comment1.target=void\ orbitWorldCenter()
+comment2.params=
+comment2.target=void\ mueve()
+numComments=3

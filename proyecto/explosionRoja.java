@@ -1,20 +1,20 @@
 import greenfoot.*;
 
 /**
- * Write a description of class explosionRoja here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Quemarmota (Rafael Renteria Gomez) 
+ * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class explosionRoja extends Actor
+public class ExplosionRoja extends Actor
 {
-   GifImage myGif=new GifImage("explosionRoja.gif");
-    /**
-     * Act - do whatever the explosion wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-  public void act()
-        {    
-            setImage(myGif.getCurrentImage());
-        }  
+    GifImage myGif=new GifImage("explosionRoja.gif");
+     /** codigo para ejecutar una imagen gif */
+    public void act()
+    {    
+        setImage(myGif.getCurrentImage());
+        ((BlurWorld)getWorld()).reInicia();
+
+    }  
 }
