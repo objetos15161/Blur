@@ -21,8 +21,12 @@ public class Uno extends Niveles
         setImage(myGif.getCurrentImage());
         if (Greenfoot.mouseClicked(this))
         {
-            Greenfoot.setWorld(new BlurWorld());
+            BlurWorld blurworld=new BlurWorld();
+            
+            Greenfoot.setWorld( blurworld);
             ((StartScreen)getWorld()).stopped();
+           
+            blurworld.set1();
         }
     }   
 
