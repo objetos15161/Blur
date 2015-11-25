@@ -18,5 +18,15 @@ public class Creditos extends Menu
     public void act()
     {    
         setImage(myGif.getCurrentImage());
+        
+          if (Greenfoot.mouseClicked(this))
+        {
+            CreditosWorld creditosw=new CreditosWorld();
+            ((StartScreen)getWorld()).stopped();
+            Greenfoot.setWorld(creditosw);
+            
+        }
     }
+    
+    
 }

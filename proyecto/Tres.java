@@ -18,6 +18,13 @@ public class Tres extends Niveles
     public void act()
     {    
         setImage(myGif.getCurrentImage());
+        if (Greenfoot.mouseClicked(this))
+        {
+            BlurWorld blur=new BlurWorld();
+            ((StartScreen)getWorld()).stopped();
+            Greenfoot.setWorld(blur);
+            blur.set3();
+        }
 
     }     
 }

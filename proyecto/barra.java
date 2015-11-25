@@ -29,7 +29,6 @@ public class Barra extends Actor
         if(getY()>mundo.getHeight()-10)
         {
             mundo.removeObject(this);
-            //mundo.creaBarra(x,50);
         }
 
     }
@@ -39,7 +38,6 @@ public class Barra extends Actor
         BlurWorld mundo=(BlurWorld)getWorld();
         if(isTouching(EsferaAzul.class))
         {
-            
             (mundo.getAzul()).golpear();
         }
         if(isTouching(EsferaRoja.class))

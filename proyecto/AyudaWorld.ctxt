@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AyudaWorld()
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ iniEsferas()
+comment2.text=Se\ utiliza\ para\ agregar\ las\ esferas\ al\ Mundo
+comment3.params=
+comment3.target=void\ started()
+comment4.params=
+comment4.target=void\ stopped()
+numComments=5

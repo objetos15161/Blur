@@ -36,6 +36,7 @@ public class StartScreen extends World
     
     public void prepare()
     {
+        started();
         Fondo fondo=new Fondo();
         addObject(fondo,202,120);
 

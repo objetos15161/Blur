@@ -17,16 +17,14 @@ public class Uno extends Niveles
      /** Actua el BlurWorld cuando se le da click al objeto */
     public void act()
     {    
-       
+        
         setImage(myGif.getCurrentImage());
         if (Greenfoot.mouseClicked(this))
         {
-            BlurWorld blurworld=new BlurWorld();
-            
-            Greenfoot.setWorld( blurworld);
+            BlurWorld blur=new BlurWorld();
             ((StartScreen)getWorld()).stopped();
-           
-            blurworld.set1();
+            Greenfoot.setWorld(blur);
+            blur.set1();
         }
     }   
 

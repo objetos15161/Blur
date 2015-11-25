@@ -65,4 +65,9 @@ public class HealthBar extends Actor
     {
         health--;
     }
+    public int getValue()
+    {
+        return health;
+    }
+    
 }

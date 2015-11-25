@@ -20,8 +20,11 @@ public class Ayuda extends Menu
         setImage(myGif.getCurrentImage());
         if (Greenfoot.mouseClicked(this))
         {
-            Greenfoot.setWorld(new AyudWorld());
-            sound.stop();
+            //sound.stop();
+           ((StartScreen)getWorld()).stopped();
+            AyudaWorld ayuda= new AyudaWorld();
+            Greenfoot.setWorld(ayuda);
+            
         }
     } 
 }

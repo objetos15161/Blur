@@ -1,8 +1,13 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ act()
-comment0.text=hereda\ de\ la\ barra2\ y\ redifine\ la\ Metodo\ girar
+comment0.target=Barra22()
 comment1.params=
-comment1.target=void\ girar()
-comment1.text=Hace\ girar\ en\ sentido\ contrario\ al\ objeto\ barra22
-numComments=2
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ girar()
+comment2.text=Hace\ girar\ en\ sentido\ contrario\ al\ objeto\ barra22
+comment3.params=
+comment3.target=void\ girarNiv4()
+comment4.params=
+comment4.target=void\ caerNiv4()
+numComments=5

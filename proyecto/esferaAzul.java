@@ -62,9 +62,19 @@ public class EsferaAzul extends Actor
     } 
      /**Este metodo es llamado por cualquiera de las barras para que explote la esfera  */
     public void golpear()
-    {
+    {   
+        
+            
+        World myWorld=getWorld();//lineas de codigo para la healthBar
+
+        BlurWorld blurworld=(BlurWorld)myWorld;
+
+        HealthBar healthbar=blurworld.getHealthBar();
+        healthbar.loseHealth();
+
+        //Termina lineas de codigo de la healthbar
         BlurWorld mundo=(BlurWorld)getWorld();
-        int x=getX(),y=getY();
+        int x=getX(),y=getY(); 
 
         mundo.removeObject(this);
         mundo.addObject( new ExplosionAzul(),x,y);

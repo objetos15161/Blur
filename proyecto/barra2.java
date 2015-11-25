@@ -10,17 +10,41 @@ import greenfoot.*;
 public class Barra2 extends Barra
 {
     /** Hereda los metodos de la barra y redifine el metodo caer  */
-    public void act() 
+  
+      private SimpleTimer tiempoG;
+   private SimpleTimer tiempoC;
+   public Barra2()
+   {
+       tiempoC=new SimpleTimer();
+       tiempoG=new SimpleTimer();
+       tiempoG.mark();
+       tiempoC.mark();
+       
+    }
+     public void act() 
     {
-        // Add your action code here.
-        girar();
+        if(((BlurWorld)getWorld()).getNivel()<4)
+        {
+             girar();
         golpear();
         caer();
-    }    
+        }
+        else
+        {
+            girarNiv4();
+            golpear();
+            caerNiv4();
+        }
+        // Add your action code here.
+    }   
      /** hace girar el objeto barra2 con una velocidad incrementada en 1 del mundo */
     public void girar()
     {
-        int vel=((BlurWorld)getWorld()).dameVel()+1;
+        int vel;
+        if(((BlurWorld)getWorld()).getNivel()<4)
+            vel=((BlurWorld)getWorld()).dameVel()+1;
+        else
+            vel=((BlurWorld)getWorld()).dameVel()+2;
         turn(vel);
     }
      /**pide al mundo la velocidad y hace caer el obstaCULO con una disminucion de 1 */
@@ -35,5 +59,15 @@ public class Barra2 extends Barra
             mundo.removeObject(this);
             //mundo.creaBarra(x,50);
         }
+    }
+      public void girarNiv4()
+    {
+         if(tiempoG.millisElapsed()>=10)
+            girar();
+    }
+     public void caerNiv4()
+    {
+         if(tiempoC.millisElapsed()>=200)
+            caer();
     }
 }

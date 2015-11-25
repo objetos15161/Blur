@@ -13,14 +13,15 @@ public class EsferaRoja extends Actor
     int rotationalSpeed = 5;
     int radius = 60;
     int vel;// adjust as needed
-     /**lo mismo que la esfera azul pero en roja  */
-  
-     public void act() 
+    /**lo mismo que la esfera azul pero en roja  */
+
+    public void act() 
     {
 
         mueve();
 
     }
+
     public void orbitWorldCenter()
     {
 
@@ -52,9 +53,17 @@ public class EsferaRoja extends Actor
         }
 
     } 
+
     public void golpear()
     {
         BlurWorld mundo=(BlurWorld)getWorld();
+        
+        World myWorld=getWorld();
+
+        BlurWorld blurworld=(BlurWorld)myWorld;
+
+        HealthBar healthbar=blurworld.getHealthBar();
+        healthbar.loseHealth();
 
         int x=getX(),y=getY();
 
