@@ -12,7 +12,7 @@ public class Star extends Actor
     
     private static final int SIZE=2;
     private int speed;
-    
+     BlurWorld mundo=(BlurWorld)getWorld();
     public Star()
     {
        GreenfootImage img=new GreenfootImage(SIZE,SIZE);
@@ -21,6 +21,9 @@ public class Star extends Actor
        img.fillOval(0,0,SIZE,SIZE);
        setImage(img);
        speed=Greenfoot.getRandomNumber(2)+1;
+   
+      
+    
     }
     public void act() 
     {

@@ -12,10 +12,6 @@ public class HealthBar extends Actor
    int healthBarWidth=170;//ancho de la barra
    int healthBarHeight=15;//altura de la barra
    int pixelsPerHealthPoint=(int)healthBarWidth/health;
-    /**
-     * Act - do whatever the HealthBar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public HealthBar()
     {
       

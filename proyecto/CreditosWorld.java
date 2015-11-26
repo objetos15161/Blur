@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class CreditosWorld extends World
 {   
-     static private final int ROWS = 600;
+    static private final int ROWS = 600;
     static private final int COLS = 400;
     static private final int CELL_WIDTH = 1;
     GreenfootSound sound = new GreenfootSound("Duet OST -  Laps.mp3");
@@ -18,11 +18,12 @@ public class CreditosWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(COLS, ROWS, CELL_WIDTH);
-         started();
+        started();
     }
-      public void act()
+    /**serie de transiciones*/
+    public void act()
     {
-        
+
         setBackground("creditos1.png");
         Greenfoot.delay(200);
         setBackground("creditos2.png");
@@ -37,16 +38,18 @@ public class CreditosWorld extends World
         Greenfoot.delay(200);
         setBackground("creditos7.png");
         Greenfoot.delay(200);
-       sound.stop();
+        sound.stop();
         Greenfoot.setWorld(new StartScreen());
-                
+
     }
-     public void started()
+    /**metodos por que funciones solo en c++ para la musica*/
+    public void started()
     {
-    sound.play();
+        sound.play();
     }
+
     public void stopped()
     {
-    sound.stop();
+        sound.stop();
     }
 }

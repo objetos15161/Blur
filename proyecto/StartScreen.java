@@ -63,18 +63,36 @@ public class StartScreen extends World
      /**  */
     public void act()
     {
-
+        
         if(Greenfoot.isKeyDown("1"))
         {
-            Greenfoot.setWorld(new BlurWorld());
-            sound.stop();
-
+           BlurWorld blur=new BlurWorld();
+            stopped();
+            Greenfoot.setWorld(blur);
+            blur.set1();
         }
-        if (Greenfoot.mouseClicked(Juega.class))
+          if(Greenfoot.isKeyDown("2"))
         {
-            Greenfoot.setWorld(new BlurWorld());
-            sound.stop();
+           BlurWorld blur=new BlurWorld();
+            stopped();
+            Greenfoot.setWorld(blur);
+            blur.set2();
         }
+          if(Greenfoot.isKeyDown("3"))
+        {
+           BlurWorld blur=new BlurWorld();
+            stopped();
+            Greenfoot.setWorld(blur);
+            blur.set3();
+        }
+          if(Greenfoot.isKeyDown("4"))
+        {
+           BlurWorld blur=new BlurWorld();
+            stopped();
+            Greenfoot.setWorld(blur);
+            blur.set4();
+        }
+      
 
     }
     

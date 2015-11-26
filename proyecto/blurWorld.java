@@ -9,7 +9,7 @@ import greenfoot.*;
  */
 public class BlurWorld extends World
 {
-    private int nivel;
+    public int nivel;
     static private final int ROWS = 400;
     static private final int COLS = 600;
     static private final int CELL_WIDTH = 1;
@@ -41,7 +41,7 @@ public class BlurWorld extends World
         super(ROWS, COLS, CELL_WIDTH);
 
         addObject(reloj,189,16);
-        
+
         addObject(puntoS,300,16);
         iniEsferas();
         addObject(healthBar,67,18);
@@ -62,7 +62,8 @@ public class BlurWorld extends World
     /**Agrega estrellas al BlurWorld*/
     public void addStars(int howMany)
     { //para hacer que las estrellas se muevan
-        for(int s=0;s<howMany;s++){
+        for(int s=0;s<howMany;s++)
+        {
             int x=Greenfoot.getRandomNumber(getWidth());
             int y=Greenfoot.getRandomNumber(getHeight());
             addObject(new Star(),x,y);
@@ -183,34 +184,31 @@ public class BlurWorld extends World
             {
                 stopped();
                 sigNivel();
-                
+
             }
 
-            
             tiempoO.mark();
-
         }
-
     }
-    
+
     public void sigNivel()
     {
-       
-            switch(nivel)
-            {
-                case 1: addObject(new InicioNivel2(),ROWS/2,-100);
-                        healthBar.setValue(3);
-                break;
-                case 2: addObject(new InicioNivel3(),ROWS/2,-100);
-                        healthBar.setValue(3);
-                break;
-                case 3:addObject(new InicioNivel4(),ROWS/2,-100);
-                       healthBar.setValue(3);
-                break;            
-                case 4:gana();
-                break;
-            } 
-        }
+
+        switch(nivel)
+        {
+            case 1: addObject(new InicioNivel2(),ROWS/2,-100);/**se agrega la frase del primer nivel*/
+            healthBar.setValue(3);/**caundo completa el nivel la barra de vidas se regenera a 3*/
+            break;
+            case 2: addObject(new InicioNivel3(),ROWS/2,-100);/**se agrega la frase del 2do nivel*/
+            healthBar.setValue(3);
+            break;
+            case 3:addObject(new InicioNivel4(),ROWS/2,-100);
+            healthBar.setValue(3);
+            break;            
+            case 4:gana();
+            break;
+        } 
+    }
 
     public void pierde()
     {
@@ -226,7 +224,7 @@ public class BlurWorld extends World
 
     public void gana()
     {
-       
+
         addObject(new Gana(),ROWS/2,0);
     }
 
@@ -272,21 +270,27 @@ public class BlurWorld extends World
     public void llenaElementosNivel1()
     {
         for(int i=0;i<nElementos;i++)
+        {
             elementos[i]=Greenfoot.getRandomNumber(2);
+        }
     }
 
     /**Llena el arreglo con numeros aleatorios del 1 al 4 para el nivel 2 */
     public void llenaElementosNivel2()
     {
         for(int i=0;i<nElementos;i++)
+        {
             elementos[i]=Greenfoot.getRandomNumber(3);
+        }
     }
 
     /**Llena el arreglo con numeros aleatorios del 1 al 5 para el nivel 3 */
     public void llenaElementosNivel3()
     {
         for(int i=0;i<nElementos;i++)
+        {
             elementos[i]=Greenfoot.getRandomNumber(5);
+        }
     }
 
     /**Crea las esferas en sus respectivas posiciones iniciales utilizando las variables eAzul y eRoja */
@@ -336,21 +340,21 @@ public class BlurWorld extends World
 
     public void started()
     {   
-        if(nivel==1)
+        if(nivel==1)/** musica para el nivel 1 */
         {
-             sound4.play();
+            sound4.play();
         }
-        if(nivel==2)
+        if(nivel==2)/**musica para el nivel 2*/
         {
             sound2.play();
         }
-        if(nivel==3)
+        if(nivel==3)/**musica para el nivel 3*/
         {
             sound3.play();
         }
     }
 
-    public void stopped()
+    public void stopped()/**detener las canciones*/
     {
         sound.stop();
         sound2.stop();
@@ -363,7 +367,7 @@ public class BlurWorld extends World
         return sound;
     }
 
-    public void set1()
+    public void set1()/**setear el nivel 1*/
     {
         n=0;
         espera=3500;
@@ -373,10 +377,10 @@ public class BlurWorld extends World
         nElementos=20;
         llenaElementosNivel1();
 
-         sound4.play();
+        sound4.play();
     }
 
-    public void set2()
+    public void set2()/**setear el nivel 2*/
     {
         n=0;
         espera=3500;
@@ -388,31 +392,31 @@ public class BlurWorld extends World
         sound2.play();
     }
 
-    public void set3()
+    public void set3()/**setear el nivel 3*/
     {
         n=0;
         espera=3500;
-       //addObject(new MsgNiv3(),ROWS/2,-100);
+        //addObject(new MsgNiv3(),ROWS/2,-100);
         nivel=3;
         vel=3;
-        nElementos=5;
+        nElementos=25;
         llenaElementosNivel3();
         sound3.play();
     }
 
-    public void set4()
+    public void set4()/**setear el nivel 4 , este nivel solo se obtiene acabando el nivel 3 */
     {
         n=0;
         espera=3500;
-        
+
         nivel=4;
         vel=4;
-        nElementos=5;
+        nElementos=30;
         llenaElementosNivel3();
         sound2.play();
     }
 
-    public void setMenu()
+    public void setMenu()/**setear menu*/
     {
 
         StartScreen mundo=new StartScreen();
@@ -421,24 +425,29 @@ public class BlurWorld extends World
         mundo.started();
 
     }
+
+    /**se obtiene el nivel*/
     public int getNivel()
     {
         return nivel;
     }
+
+    /**meotods para hacer funcionar los puntos*/
     public void reiniciaPuntos()
     {
         puntos=0;
     }
+
     public void sumaPuntos(int p) 
     {
         puntos+=p;
     }
-    
+
     public int getPuntos()
     {
         return(puntos);
     }
-    
+
 }
 
    

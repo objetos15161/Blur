@@ -9,7 +9,7 @@ import greenfoot.*;
  */
 public class Barra extends Actor
 {
-    
+
     private int vel;
     public void act() 
     {
@@ -19,7 +19,8 @@ public class Barra extends Actor
         caer();
 
     }    
-     /**Mueve el obstaculo hacia abajo y lo borra cuando llega al fondo  */
+
+    /**Mueve el obstaculo hacia abajo y lo borra cuando llega al fondo  */
     public void caer()
     {
         int x=getX();
@@ -28,7 +29,7 @@ public class Barra extends Actor
         this.setLocation(getX(),getY()+vel);
         if(getY()>mundo.getHeight()-10)
         {
-            
+
             mundo.removeObject(this);
             switch(mundo.getNivel())
             {
@@ -41,12 +42,10 @@ public class Barra extends Actor
                 case 4: mundo.sumaPuntos(40);
                 break;
             }
-           
-            
-        }
 
+        }
     }
-     /**Si toca una esfera roja se pida al mundo la identidad de esa esfera y se activa el metodo golpear en los objestos tipo esfera  */
+    /**Si toca una esfera roja se pida al mundo la identidad de esa esfera y se activa el metodo golpear en los objestos tipo esfera  */
     public void golpear()
     {
         BlurWorld mundo=(BlurWorld)getWorld();
@@ -55,7 +54,7 @@ public class Barra extends Actor
             (mundo.getAzul()).golpear();
             mundo.reiniciaPuntos();
         }
-        
+
         if(isTouching(EsferaRoja.class))
         {
             (mundo.getRoja()).golpear();

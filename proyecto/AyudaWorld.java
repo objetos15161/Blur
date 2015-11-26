@@ -18,7 +18,6 @@ public class AyudaWorld extends World
     EsferaMenuAzul eAzul2=new EsferaMenuAzul();
     EsferaRojaMenu eRoja2=new EsferaRojaMenu();
 
-      
     public AyudaWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -35,29 +34,30 @@ public class AyudaWorld extends World
 
         iniEsferas();
 
-        
         if(Greenfoot.isKeyDown("enter"))
         {
             sound.stop();
             StartScreen mundo= new StartScreen();
             Greenfoot.setWorld(mundo);
-            
 
         }
     }
+
     /**Se utiliza para agregar las esferas al Mundo*/
     public void iniEsferas()
     {
         addObject ( eAzul2, 188, 461);
         addObject( eRoja2, 212, 579);
     }
-     public void started()
+
+    public void started()
     {
-    sound.play();
+        sound.play();
     }
+
     public void stopped()
     {
-    sound.stop();
+        sound.stop();
     }
 }
 
