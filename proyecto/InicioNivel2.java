@@ -35,7 +35,8 @@ public class InicioNivel2 extends InicioNivel1
          this.setLocation(200,300);
            if(tiempo.millisElapsed()>=2500)
         {
-           mundo.set2();
+            
+          //mundo.set2();
             mundo.removeObject(this);
         }
     }
@@ -47,7 +48,7 @@ public class InicioNivel2 extends InicioNivel1
         vel=mundo.dameVel();
         if(ini==1)
             this.setLocation(getX(),getY()+vel);
-        if(tiempo.millisElapsed()>=3000)
+        if(tiempo.millisElapsed()>=3000||getY()>590)
         {
             mundo.set2();
             mundo.removeObject(this);

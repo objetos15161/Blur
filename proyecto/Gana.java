@@ -14,22 +14,29 @@ public class Gana extends InicioNivel1
      */
   private SimpleTimer tiempo=new SimpleTimer();
     private SimpleTimer tiempoIni=new SimpleTimer();
+     private SimpleTimer tiempoQ=new SimpleTimer();
     private int ini;
     GifImage myGif=new GifImage("noestassolo.gif");
     public void act() 
     {
         inicio();
         setImage(myGif.getCurrentImage());
-        //caer();
-          ponerTexto();
+        if((getY()<getWorld().getHeight()/2))
+        {
+             caer();
+             tiempoQ.mark();
+        }
+         else    
+          
+         ponerTexto();
         // Add your action code here.
     }
        public void ponerTexto()
     {
          BlurWorld mundo=(BlurWorld)getWorld();
          
-         this.setLocation(200,300);
-           if(tiempo.millisElapsed()>=2500)
+         this.setLocation(200,getWorld().getHeight()/2);
+           if(tiempoQ.millisElapsed()>=2500)
         {
             ((BlurWorld)(getWorld())).setMenu();   
             mundo.removeObject(this);
@@ -49,17 +56,16 @@ public class Gana extends InicioNivel1
         vel=mundo.dameVel();
         if(ini==1)
             this.setLocation(getX(),getY()+vel);
-        if(tiempo.millisElapsed()>=2000)
+        if(tiempo.millisElapsed()>=3000)
         {
-            mundo.setMenu();
-            // mundo.set2();
+             //mundo.set2();
             mundo.removeObject(this);
         }
 
     }
     public void inicio()
     {
-       if(tiempoIni.millisElapsed()>=2000&&ini==0)
+       if(tiempoIni.millisElapsed()>=3000&&ini==0)
        {
             tiempo.mark();
             ini=1;

@@ -31,7 +31,7 @@ import java.awt.Color;
  * @author Neil Brown and Michael Kölling 
  * @version 1.0
  */
-public class Counter extends Actor
+public class CounterP extends Actor
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
@@ -39,7 +39,7 @@ public class Counter extends Actor
     private int target;
     private String prefix;
 
-    public Counter()
+    public CounterP()
     {
         this(new String());
         //para cmabiar el tamaño del counter(mas grande)
@@ -53,7 +53,7 @@ public class Counter extends Actor
     /**
      * Create a new counter, initialised to 0.
      */
-    public Counter(String prefix)
+    public CounterP(String prefix)
     {
         background = getImage();  // get image from class
         value = 0;
@@ -123,7 +123,7 @@ public class Counter extends Actor
 
     
         GreenfootImage image = new GreenfootImage(background);
-        GreenfootImage text = new GreenfootImage(prefix + value, 40,Color.CYAN, transparent);
+        GreenfootImage text = new GreenfootImage(prefix + value, 20,Color.RED, transparent);
 
         if (text.getWidth() > image.getWidth() - 20)
         {

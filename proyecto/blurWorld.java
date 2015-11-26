@@ -25,12 +25,15 @@ public class BlurWorld extends World
     private SimpleTimer tiempoE=new SimpleTimer();/**Da el tiempo de explosion para la esfera roja y azul */
     private SimpleTimer tiempoO=new SimpleTimer();/** Da el tiempo de espera para el siguiente obstaculo*/
     private Reloj reloj=new Reloj();
+    private Counter counter=new Counter();
+    private Puntos puntoS=new Puntos();
     HealthBar healthBar=new HealthBar();
     EsferaAzul eAzul=new EsferaAzul();
     EsferaRoja eRoja=new EsferaRoja();
     //Perdistes perdistes= new Perdistes();
     private int espera;
     private int pierde=0;
+    private int puntos;
 
     public BlurWorld()
     {    
@@ -38,13 +41,15 @@ public class BlurWorld extends World
         super(ROWS, COLS, CELL_WIDTH);
 
         addObject(reloj,189,16);
+        
+        addObject(puntoS,300,16);
         iniEsferas();
         addObject(healthBar,67,18);
         tiempoO.mark();
         //sound.play();
         addObject(new Circulo(),203,488);
         //para hacer  estrellas
-
+        puntos=0;
         GreenfootImage img=new GreenfootImage(ROWS,COLS);
         img.fill();
         setBackground(img);
@@ -194,10 +199,13 @@ public class BlurWorld extends World
             switch(nivel)
             {
                 case 1: addObject(new InicioNivel2(),ROWS/2,-100);
+                        healthBar.setValue(3);
                 break;
                 case 2: addObject(new InicioNivel3(),ROWS/2,-100);
+                        healthBar.setValue(3);
                 break;
                 case 3:addObject(new InicioNivel4(),ROWS/2,-100);
+                       healthBar.setValue(3);
                 break;            
                 case 4:gana();
                 break;
@@ -218,7 +226,7 @@ public class BlurWorld extends World
 
     public void gana()
     {
-        borraTodo();
+       
         addObject(new Gana(),ROWS/2,0);
     }
 
@@ -322,6 +330,7 @@ public class BlurWorld extends World
         removeObjects(getObjects(EsferaRoja.class));
         removeObjects(getObjects(Barra.class));
         removeObjects(getObjects(Barra2.class));
+        removeObjects(getObjects(Circulo.class));
 
     }
 
@@ -371,7 +380,7 @@ public class BlurWorld extends World
     {
         n=0;
         espera=3500;
-        //addObject(new InicioNivel2(),ROWS/2,-100);
+        //addObject(new MsgNiv2(),ROWS/2,-100);
         nivel=2;
         vel=3;
         nElementos=25;
@@ -383,10 +392,10 @@ public class BlurWorld extends World
     {
         n=0;
         espera=3500;
-       // addObject(new InicioNivel3(),ROWS/2,-100);
+       //addObject(new MsgNiv3(),ROWS/2,-100);
         nivel=3;
         vel=3;
-        nElementos=20;
+        nElementos=5;
         llenaElementosNivel3();
         sound3.play();
     }
@@ -398,7 +407,7 @@ public class BlurWorld extends World
         
         nivel=4;
         vel=4;
-        nElementos=30;
+        nElementos=5;
         llenaElementosNivel3();
         sound2.play();
     }
@@ -416,7 +425,19 @@ public class BlurWorld extends World
     {
         return nivel;
     }
+    public void reiniciaPuntos()
+    {
+        puntos=0;
+    }
+    public void sumaPuntos(int p) 
+    {
+        puntos+=p;
+    }
     
+    public int getPuntos()
+    {
+        return(puntos);
+    }
     
 }
 

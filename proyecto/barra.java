@@ -28,7 +28,21 @@ public class Barra extends Actor
         this.setLocation(getX(),getY()+vel);
         if(getY()>mundo.getHeight()-10)
         {
+            
             mundo.removeObject(this);
+            switch(mundo.getNivel())
+            {
+                case 1: mundo.sumaPuntos(10);
+                break;
+                case 2: mundo.sumaPuntos(20);
+                break;
+                case 3: mundo.sumaPuntos(30);
+                break;
+                case 4: mundo.sumaPuntos(40);
+                break;
+            }
+           
+            
         }
 
     }
@@ -39,10 +53,13 @@ public class Barra extends Actor
         if(isTouching(EsferaAzul.class))
         {
             (mundo.getAzul()).golpear();
+            mundo.reiniciaPuntos();
         }
+        
         if(isTouching(EsferaRoja.class))
         {
             (mundo.getRoja()).golpear();
+            mundo.reiniciaPuntos();
 
         }
 

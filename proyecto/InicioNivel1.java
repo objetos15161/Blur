@@ -51,7 +51,7 @@ public class InicioNivel1 extends Barra
             this.setLocation(getX(),getY()+vel);
         if(tiempo.millisElapsed()>=3000)
         {
-          // mundo.set4();
+    
             mundo.removeObject(this);
         }
 
