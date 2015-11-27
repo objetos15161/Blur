@@ -11,7 +11,7 @@ public class CreditosWorld extends World
     static private final int ROWS = 600;
     static private final int COLS = 400;
     static private final int CELL_WIDTH = 1;
-    GreenfootSound sound = new GreenfootSound("Duet OST -  Laps.mp3");
+    GreenfootSound sound = new GreenfootSound("Untitled2.mp3");
 
     /**Mundo que pregunta si desea intentar de nuevo el nivel o regresar al menu */
     public CreditosWorld()

@@ -13,10 +13,10 @@ public class BlurWorld extends World
     static private final int ROWS = 400;
     static private final int COLS = 600;
     static private final int CELL_WIDTH = 1;
-    GreenfootSound sound = new GreenfootSound("Blur.mp3");
-    GreenfootSound sound2 = new GreenfootSound("blur2.mp3");
-    GreenfootSound sound3 = new GreenfootSound("blur3.mp3");
-    GreenfootSound sound4 = new GreenfootSound("Duet OST - Arete l.mp3");
+    GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
+    GreenfootSound sound2 = new GreenfootSound("blur2.mp3.mp3");
+    GreenfootSound sound3 = new GreenfootSound("Untitled.mp3");
+    GreenfootSound sound4 = new GreenfootSound("Untitled2.mp3");
     private final int numE=50;
     private int nElementos;
     private int elementos[]=new int[numE];
