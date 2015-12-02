@@ -1,17 +1,18 @@
 import greenfoot.*;
 
 /**
- * Write a description of class TryAgain here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
 public class CreditosWorld extends World
 {   
     static private final int ROWS = 600;
     static private final int COLS = 400;
     static private final int CELL_WIDTH = 1;
-    GreenfootSound sound = new GreenfootSound("Untitled2.mp3");
+    private GreenfootSound sound = new GreenfootSound("Untitled2.mp3");
 
     /**Mundo que pregunta si desea intentar de nuevo el nivel o regresar al menu */
     public CreditosWorld()

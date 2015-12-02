@@ -1,10 +1,11 @@
 import greenfoot.*;
 
 /**
- * Write a description of class PasaNivel1 here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
 public class InicioNivel1 extends Barra
 {
@@ -16,7 +17,7 @@ public class InicioNivel1 extends Barra
     private SimpleTimer tiempo=new SimpleTimer();
     private SimpleTimer tiempoIni=new SimpleTimer();
     private int ini;
-      GifImage myGif=new GifImage("frase1.gif");
+     private GifImage myGif=new GifImage("frase1.gif");
     public void act() 
     {
         
@@ -26,6 +27,7 @@ public class InicioNivel1 extends Barra
         //caer();
         // Add your action code here.
     }
+    /** pone el texto en una posicion*/
     public void PonerTexto()
     {
          BlurWorld mundo=(BlurWorld)getWorld();
@@ -41,6 +43,7 @@ public class InicioNivel1 extends Barra
         ini=0;
         tiempoIni.mark();
     }
+     /**Este metodo solo se manda llamar cuando el juego es completado*/
      public void caer()
     {
         int vel;
@@ -56,6 +59,7 @@ public class InicioNivel1 extends Barra
         }
 
     }
+    /**se inicia el tiempo*/
     public void inicio()
     {
        if(tiempoIni.millisElapsed()>=1000&&ini==0)

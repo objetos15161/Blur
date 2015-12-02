@@ -1,10 +1,11 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Gana here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
 public class Gana extends InicioNivel1
 {
@@ -16,7 +17,7 @@ public class Gana extends InicioNivel1
     private SimpleTimer tiempoIni=new SimpleTimer();
      private SimpleTimer tiempoQ=new SimpleTimer();
     private int ini;
-    GifImage myGif=new GifImage("noestassolo.gif");
+   private GifImage myGif=new GifImage("noestassolo.gif");
     public void act() 
     {
         inicio();
@@ -31,6 +32,7 @@ public class Gana extends InicioNivel1
          ponerTexto();
         // Add your action code here.
     }
+    /** pone el texto en una posicion*/
        public void ponerTexto()
     {
          BlurWorld mundo=(BlurWorld)getWorld();
@@ -43,11 +45,13 @@ public class Gana extends InicioNivel1
             
         }
     }
+    /**Este metodo solo se manda llamar cuando el juego es completado*/
     public Gana()
     {
         ini=0;
         tiempoIni.mark();
     }
+    /**Metodo utilizado de las barras para hacer que el texto caiga*/
      public void caer()
     {
         int vel;
@@ -63,6 +67,7 @@ public class Gana extends InicioNivel1
         }
 
     }
+    /**se inicia el tiempo*/
     public void inicio()
     {
        if(tiempoIni.millisElapsed()>=3000&&ini==0)

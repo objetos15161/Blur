@@ -1,19 +1,20 @@
 import greenfoot.*;
 
+
 /**
+ * Write a description of class AyudWorld here.
  * 
- * 
- * @Quemarmota (Rafael Renteria Gomez) 
- * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
 public class EsferaRojaMenu extends EsferaRoja
 {
     static private final int ROWS = 400;
     static private final int COLS = 600;
-    int rotationalSpeed = -5;
-    int radius = 60;
-    int vel;// adjust as needed
+     private int rotationalSpeed = 5;
+    private int radius = 60;
+    private int vel;// adjust as needed
     /**
      * Act - do whatever the esferaRoja wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,6 +25,7 @@ public class EsferaRojaMenu extends EsferaRoja
         mueve();
 
     }
+    /** Metodo que pone la esfera en tal posicion y la hace girar en cierto radio*/
     public void orbitWorldCenter()
     {
 
@@ -33,7 +35,7 @@ public class EsferaRojaMenu extends EsferaRoja
         move(radius);
         turn(-90);
     } 
-
+     /**las esferas giraran dependiendo de la tecla que se presione */
     public void mueve()
     { 
 

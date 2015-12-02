@@ -1,10 +1,11 @@
 import greenfoot.*;
 
 /**
- * Write a description of class PasaNivel1 here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
 public class InicioNivel4 extends Barra
 {
@@ -16,7 +17,7 @@ public class InicioNivel4 extends Barra
     private SimpleTimer tiempo=new SimpleTimer();
     private SimpleTimer tiempoIni=new SimpleTimer();
     private int ini;
-      GifImage myGif=new GifImage("frase3.1.gif");
+     private GifImage myGif=new GifImage("frase3.1.gif");
     public void act() 
     {
         

@@ -1,10 +1,12 @@
 import greenfoot.*;
 
+
 /**
- * Write a description of class LetrasAyuda here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
 public class LetrasAyuda extends Ayuda
 {

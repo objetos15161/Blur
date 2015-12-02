@@ -5,8 +5,8 @@ import java.awt.Color;
 /**
  * Write a description of class AyudWorld here.
  * 
- * @Quemarmota (Rafael Renteria Gomez) 
- * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
 public class Puntos extends Actor
@@ -20,16 +20,12 @@ public class Puntos extends Actor
         
 
     }
-
+    /**Se agrega al mundo antes de que este se cree */
     protected void addedToWorld(World mundo)
     {
         mundo.addObject(puntos,300,16);
     }
 
-    /**
-     * Act - do whatever the Reloj wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
        BlurWorld mundo =(BlurWorld)getWorld();

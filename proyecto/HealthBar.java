@@ -8,10 +8,11 @@ import java.awt.Color;
  */
 public class HealthBar extends Actor
 {
-   int health=3;//numero de vidas
-   int healthBarWidth=170;//ancho de la barra
-   int healthBarHeight=15;//altura de la barra
-   int pixelsPerHealthPoint=(int)healthBarWidth/health;
+   private int health=3;//numero de vidas
+   private int healthBarWidth=170;//ancho de la barra
+   private int healthBarHeight=15;//altura de la barra
+   private int pixelsPerHealthPoint=(int)healthBarWidth/health;
+   /**Constructor , actualiza la barra de vida */
     public HealthBar()
     {
       
@@ -22,6 +23,7 @@ public class HealthBar extends Actor
     {
         update();
     }    
+    /**si la variable healt es igual la barra de vida es blanca, si es 2 la abrra es amarilla y si es 1 la barra es roja */
     public void update()//dibuja la barra de vida
     //LOS IFS SE USAN PARA CAMBIAR LA BARRA CONFORME PIERDE VIDA
     {   if(health==3){
@@ -56,11 +58,12 @@ public class HealthBar extends Actor
        myImage.fillRect(1,1,health*pixelsPerHealthPoint,healthBarHeight);
     }
     }
-    
+    /**Metodo para reducir la variable health en -1 */
     public void loseHealth()
     {
         health--;
     }
+    /**Meotodo que regresa el valor de la variable health */
     public int getValue()
     {
         return health;

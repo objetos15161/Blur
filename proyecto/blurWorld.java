@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class BlurWorld here.
+ * Write a description of class AyudWorld here.
  * 
- * @Quemarmota (Rafael Renteria Gomez) 
- * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
 public class BlurWorld extends World
@@ -13,10 +13,10 @@ public class BlurWorld extends World
     static private final int ROWS = 400;
     static private final int COLS = 600;
     static private final int CELL_WIDTH = 1;
-    GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
-    GreenfootSound sound2 = new GreenfootSound("blur2.mp3.mp3");
-    GreenfootSound sound3 = new GreenfootSound("Untitled.mp3");
-    GreenfootSound sound4 = new GreenfootSound("Untitled2.mp3");
+    private GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
+    private GreenfootSound sound2 = new GreenfootSound("blur2.mp3.mp3");
+    private GreenfootSound sound3 = new GreenfootSound("Untitled.mp3");
+    private GreenfootSound sound4 = new GreenfootSound("Untitled2.mp3");
     private final int numE=50;
     private int nElementos;
     private int elementos[]=new int[numE];
@@ -27,9 +27,9 @@ public class BlurWorld extends World
     private Reloj reloj=new Reloj();
     private Counter counter=new Counter();
     private Puntos puntoS=new Puntos();
-    HealthBar healthBar=new HealthBar();
-    EsferaAzul eAzul=new EsferaAzul();
-    EsferaRoja eRoja=new EsferaRoja();
+    private HealthBar healthBar=new HealthBar();
+    private EsferaAzul eAzul=new EsferaAzul();
+    private EsferaRoja eRoja=new EsferaRoja();
     //Perdistes perdistes= new Perdistes();
     private int espera;
     private int pierde=0;
@@ -324,6 +324,7 @@ public class BlurWorld extends World
         n=0;
         tiempoO.mark();
         borraTodo();
+        addObject(new Circulo(),203,488);
         iniEsferas();
     }
 

@@ -1,12 +1,14 @@
 import greenfoot.*;
 
+
 /**
- * Write a description of class barra3 here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class barra3 extends Actor
+public class Barra3 extends Actor
 {
     /**
      * Act - do whatever the barra3 wants to do. This method is called whenever

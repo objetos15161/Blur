@@ -1,18 +1,19 @@
 import greenfoot.*;
+
 /**
+ * Write a description of class AyudWorld here.
  * 
- * 
- * @Quemarmota (Rafael Renteria Gomez) 
- * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
 public class EsferaRoja extends Actor
 {
     static private final int ROWS = 400;
     static private final int COLS = 600;
-    int rotationalSpeed = 5;
-    int radius = 60;
-    int vel;// adjust as needed
+    private int rotationalSpeed = 5;
+    private int radius = 60;
+    private int vel;// adjust as needed
     /**lo mismo que la esfera azul pero en roja  */
 
     public void act() 
@@ -21,7 +22,7 @@ public class EsferaRoja extends Actor
         mueve();
 
     }
-
+    /** Metodo que pone la esfera en tal posicion y la hace girar en cierto radio*/
     public void orbitWorldCenter()
     {
 
@@ -30,7 +31,7 @@ public class EsferaRoja extends Actor
         move(radius);
         turn(90);
     }
-
+    /**las esferas giraran dependiendo de la tecla que se presione */
     public void mueve()
     { 
         BlurWorld mundo= (BlurWorld)getWorld();
@@ -53,7 +54,7 @@ public class EsferaRoja extends Actor
         }
 
     } 
-
+    /**si la esfera golpea se le resta a la variable health por medio del metodo loseHealth */
     public void golpear()
     {
         BlurWorld mundo=(BlurWorld)getWorld();

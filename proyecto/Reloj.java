@@ -2,11 +2,12 @@ import greenfoot.*;
 import java.awt.Font;
 import java.awt.Color;
 
+
 /**
  * Write a description of class AyudWorld here.
  * 
- * @Quemarmota (Rafael Renteria Gomez) 
- * @Oscar1delaTorre (Oscar de la Torre Hernandez) 
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
 public class Reloj extends Actor
@@ -20,16 +21,13 @@ public class Reloj extends Actor
         timer = new SimpleTimer();
 
     }
-
+    /**Se agrega al mundo antes de que este se cree */
     protected void addedToWorld(World mundo)
     {
         mundo.addObject(valor,189,16);
     }
 
-    /**
-     * Act - do whatever the Reloj wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    /** por cada milisegundos se le agrega 1 al valor del timer*/
     public void act() 
     {
         if(timer.millisElapsed() > 1000)

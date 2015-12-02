@@ -1,7 +1,9 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ barra3\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.target=Barra3
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ AyudWorld\ here.\r\n\ \r\n\ @Author1\ (Rafael\ Renteria\ Gomez)\ \r\n\ @Author2\ (Oscar\ de\ la\ Torre\ Hernandez)\ \r\n\ @version\ (14/noviembre/2015)\r\n
 comment1.params=
-comment1.target=void\ caer()
-numComments=2
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ barra3\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ caer()
+numComments=3

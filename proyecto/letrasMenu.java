@@ -1,12 +1,14 @@
 import greenfoot.*;
 
+
 /**
- * Write a description of class letrasMenu here.
+ * Write a description of class AyudWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author1 (Rafael Renteria Gomez) 
+ * @Author2 (Oscar de la Torre Hernandez) 
+ * @version (14/noviembre/2015)
  */
-public class letrasMenu extends Actor
+public class LetrasMenu extends Actor
 {
     /**
      * Act - do whatever the letrasMenu wants to do. This method is called whenever

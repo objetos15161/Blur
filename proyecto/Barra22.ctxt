@@ -1,13 +1,15 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Barra22()
+comment0.target=Barra22
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ AyudWorld\ here.\r\n\ \r\n\ @Author1\ (Rafael\ Renteria\ Gomez)\ \r\n\ @Author2\ (Oscar\ de\ la\ Torre\ Hernandez)\ \r\n\ @version\ (14/noviembre/2015)\r\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Barra22()
 comment2.params=
-comment2.target=void\ girar()
-comment2.text=Hace\ girar\ en\ sentido\ contrario\ al\ objeto\ barra22
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ girarNiv4()
+comment3.target=void\ girar()
+comment3.text=Hace\ girar\ en\ sentido\ contrario\ al\ objeto\ barra22
 comment4.params=
-comment4.target=void\ caerNiv4()
-numComments=5
+comment4.target=void\ girarNiv4()
+comment5.params=
+comment5.target=void\ caerNiv4()
+numComments=6
