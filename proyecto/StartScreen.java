@@ -12,10 +12,10 @@ public class StartScreen extends World
     static private final int ROWS = 400;
     static private final int COLS = 600;
     static private final int CELL_WIDTH = 1;
-    GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
-    private int vel;
-    EsferaMenuAzul eAzul2=new EsferaMenuAzul();
-    EsferaRojaMenu eRoja2=new EsferaRojaMenu();
+    private GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
+    
+    private EsferaMenuAzul eAzul2=new EsferaMenuAzul();
+    private EsferaRojaMenu eRoja2=new EsferaRojaMenu();
 
       
     /**
@@ -60,7 +60,7 @@ public class StartScreen extends World
 
         
     }
-     /**  */
+     /** Si la tecla 1 es presionada el nivel 1 empezara asi hasta el nivel 4 */
     public void act()
     {
         
@@ -95,15 +95,17 @@ public class StartScreen extends World
       
 
     }
-    
+    /**metodo para tocar la musica */
     public void started()
     {
     sound.play();
     }
+    /**metodo para detener la musica */
     public void stopped()
     {
     sound.stop();
     }
+    /**regresa la variable sound */
     public  GreenfootSound musica()
     {
         return sound;

@@ -17,11 +17,11 @@ public class BlurWorld extends World
     private GreenfootSound sound2 = new GreenfootSound("blur2.mp3.mp3");
     private GreenfootSound sound3 = new GreenfootSound("Untitled.mp3");
     private GreenfootSound sound4 = new GreenfootSound("Untitled2.mp3");
-    private final int numE=50;
-    private int nElementos;
+    private final int numE=50;//numero de obstaculos que caen
+    private int nElementos;// variable de obstaculos
     private int elementos[]=new int[numE];
-    private int n=0;
-    private int vel;
+    private int sinobstaculos=0;//variable que se usa cuando no existen obstaculos ya en el mundo
+    private int vel;//velocidad del mundo
     private SimpleTimer tiempoE=new SimpleTimer();/**Da el tiempo de explosion para la esfera roja y azul */
     private SimpleTimer tiempoO=new SimpleTimer();/** Da el tiempo de espera para el siguiente obstaculo*/
     private Reloj reloj=new Reloj();
@@ -59,7 +59,8 @@ public class BlurWorld extends World
 
     }
 
-    /**Agrega estrellas al BlurWorld*/
+    /**Agrega estrellas al BlurWorld
+       paramether howMnay*/
     public void addStars(int howMany)
     { //para hacer que las estrellas se muevan
         for(int s=0;s<howMany;s++)
@@ -87,10 +88,10 @@ public class BlurWorld extends World
             removeObjects(getObjects(ExplosionAzul.class));
         }
 
-        if(tiempoO.millisElapsed()>=espera&&n<nElementos-1)/**Si pasa el tiempo de espera crea un obstaculo y aumenta n en 1 para el siguiente obstaculo */
+        if(tiempoO.millisElapsed()>=espera&&sinobstaculos<nElementos-1)/**Si pasa el tiempo de espera crea un obstaculo y aumenta n en 1 para el siguiente obstaculo */
         {
 
-            switch(elementos[n])
+            switch(elementos[sinobstaculos])
             {
                 case 0: 
 
@@ -143,13 +144,13 @@ public class BlurWorld extends World
                 switch(nivel)
                 {
                     case 3:
-                    if(elementos[n+1]==3||elementos[n+1]==4)
+                    if(elementos[sinobstaculos+1]==3||elementos[sinobstaculos+1]==4)
                         espera=1750;
                     else
                         espera=1950;
                     break;
                     case 4:
-                    if(elementos[n+1]==3||elementos[n+1]==4)
+                    if(elementos[sinobstaculos+1]==3||elementos[sinobstaculos+1]==4)
                         espera=1200;
                     else
                         espera=1850;
@@ -161,13 +162,13 @@ public class BlurWorld extends World
                 switch(nivel)
                 {
                     case 3:
-                    if(elementos[n+1]==3||elementos[n+1]==4)
+                    if(elementos[sinobstaculos+1]==3||elementos[sinobstaculos+1]==4)
                         espera=1750;
                     else
                         espera=1950;
                     break;
                     case 4:
-                    if(elementos[n+1]==3||elementos[n+1]==4)
+                    if(elementos[sinobstaculos+1]==3||elementos[sinobstaculos+1]==4)
                         espera=1200;
                     else
                         espera=1850;
@@ -179,8 +180,8 @@ public class BlurWorld extends World
 
             }
             pierde();
-            n++;
-            if(n==nElementos-1)
+            sinobstaculos++;
+            if(sinobstaculos==nElementos-1)
             {
                 stopped();
                 sigNivel();
@@ -190,7 +191,7 @@ public class BlurWorld extends World
             tiempoO.mark();
         }
     }
-
+    /** empieza el siguiente nivel*/
     public void sigNivel()
     {
 
@@ -209,7 +210,7 @@ public class BlurWorld extends World
             break;
         } 
     }
-
+     /**Cuando la vida es igual a 0 aparece una imagen que dice perdiste*/
     public void pierde()
     {
         if(healthBar.getValue()==0&&pierde==0)
@@ -221,6 +222,7 @@ public class BlurWorld extends World
             pierde=1;
         }
     }
+    /**se agrega el objeto gana*/
 
     public void gana()
     {
@@ -321,7 +323,7 @@ public class BlurWorld extends World
     /**Es llamado en el momento que cualquier obstaculo choca con una esfera para reiniciar todo */
     public void reInicia()
     {
-        n=0;
+        sinobstaculos=0;
         tiempoO.mark();
         borraTodo();
         addObject(new Circulo(),203,488);
@@ -338,7 +340,7 @@ public class BlurWorld extends World
         removeObjects(getObjects(Circulo.class));
 
     }
-
+    /**para que toque la musica dependiendo el nivel*/
     public void started()
     {   
         if(nivel==1)/** musica para el nivel 1 */
@@ -354,23 +356,23 @@ public class BlurWorld extends World
             sound3.play();
         }
     }
-
-    public void stopped()/**detener las canciones*/
+    /**detener todas las canciones*/
+    public void stopped()
     {
         sound.stop();
         sound2.stop();
         sound3.stop();
         sound4.stop();
     }
-
+    /**regresa la variable sound*/
     public  GreenfootSound musica()
     {
         return sound;
     }
-
-    public void set1()/**setear el nivel 1*/
+    /**setear el nivel 1*/
+    public void set1()
     {
-        n=0;
+        sinobstaculos=0;
         espera=3500;
         addObject(new InicioNivel1(),ROWS/2,-100);
         nivel=1;
@@ -380,10 +382,10 @@ public class BlurWorld extends World
 
         sound4.play();
     }
-
-    public void set2()/**setear el nivel 2*/
+    /**setear el nivel 2*/
+    public void set2()
     {
-        n=0;
+        sinobstaculos=0;
         espera=3500;
         //addObject(new MsgNiv2(),ROWS/2,-100);
         nivel=2;
@@ -392,10 +394,10 @@ public class BlurWorld extends World
         llenaElementosNivel2();
         sound2.play();
     }
-
-    public void set3()/**setear el nivel 3*/
+    /**setear el nivel 3*/
+    public void set3()
     {
-        n=0;
+        sinobstaculos=0;
         espera=3500;
         //addObject(new MsgNiv3(),ROWS/2,-100);
         nivel=3;
@@ -404,10 +406,10 @@ public class BlurWorld extends World
         llenaElementosNivel3();
         sound3.play();
     }
-
-    public void set4()/**setear el nivel 4 , este nivel solo se obtiene acabando el nivel 3 */
+    /**setear el nivel 4 , este nivel solo se obtiene acabando el nivel 3 */
+    public void set4()
     {
-        n=0;
+        sinobstaculos=0;
         espera=3500;
 
         nivel=4;
@@ -416,8 +418,8 @@ public class BlurWorld extends World
         llenaElementosNivel3();
         sound2.play();
     }
-
-    public void setMenu()/**setear menu*/
+    /**setear menu*/
+    public void setMenu()
     {
 
         StartScreen mundo=new StartScreen();
@@ -438,12 +440,14 @@ public class BlurWorld extends World
     {
         puntos=0;
     }
-
+    /**se incrementa en uno la variable puntos
+       paramether p
+       */
     public void sumaPuntos(int p) 
     {
         puntos+=p;
     }
-
+    /**regresa la variable puntos*/
     public int getPuntos()
     {
         return(puntos);
