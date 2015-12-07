@@ -250,17 +250,17 @@ public class BlurWorld extends World
     public void creaBarra3()
     {
         if(nivel<4)
-            addObject( new Barra2(), ROWS/2, 65);
+            addObject( new BarraGiraDerecha(), ROWS/2, 65);
         else
-            addObject( new Barra2(), ROWS/2, 15);
+            addObject( new BarraGiraDerecha(), ROWS/2, 15);
     }
 
     public void creaBarra4()
     {
         if(nivel<4)
-            addObject( new Barra22(), ROWS/2, 65);
+            addObject( new BarraGiraIzquierda(), ROWS/2, 65);
         else
-            addObject( new Barra22(), ROWS/2, 15);
+            addObject( new BarraGiraIzquierda(), ROWS/2, 15);
     }
 
     public void creaBarraCentro()
@@ -336,7 +336,7 @@ public class BlurWorld extends World
         removeObjects(getObjects(EsferaAzul.class));
         removeObjects(getObjects(EsferaRoja.class));
         removeObjects(getObjects(Barra.class));
-        removeObjects(getObjects(Barra2.class));
+        removeObjects(getObjects(BarraGiraDerecha.class));
         removeObjects(getObjects(Circulo.class));
 
     }

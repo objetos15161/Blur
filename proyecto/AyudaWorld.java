@@ -14,8 +14,7 @@ public class AyudaWorld extends World
     static private final int COLS = 600;
     static private final int CELL_WIDTH = 1;
     private GreenfootSound sound = new GreenfootSound("Untitled2.mp3");
-    private EsferaMenuAzul eAzul2=new EsferaMenuAzul();
-    private EsferaRojaMenu eRoja2=new EsferaRojaMenu();
+   
     /**Constructor */
     public AyudaWorld()
     {    
@@ -23,15 +22,13 @@ public class AyudaWorld extends World
         super(ROWS, COLS, CELL_WIDTH); 
         LetrasAyuda letrasayuda=new LetrasAyuda();
         addObject(letrasayuda,203,299);
-        Circulo cir=new Circulo();
-        addObject(cir,203,488);
         started();
     }
     /** Se inician las esferas que son para practicar*/
     public void act()
     {
 
-        iniEsferas();
+       
 
         if(Greenfoot.isKeyDown("enter"))
         {
@@ -42,12 +39,7 @@ public class AyudaWorld extends World
         }
     }
 
-    /**Se utiliza para agregar las esferas al Mundo*/
-    public void iniEsferas()
-    {
-        addObject ( eAzul2, 188, 461);
-        addObject( eRoja2, 212, 579);
-    }
+   
     /** Metodo para que la tocar musica*/
     public void started()
     {

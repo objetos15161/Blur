@@ -14,8 +14,7 @@ public class StartScreen extends World
     static private final int CELL_WIDTH = 1;
     private GreenfootSound sound = new GreenfootSound("Blur (mp3cut.net).mp3");
     
-    private EsferaMenuAzul eAzul2=new EsferaMenuAzul();
-    private EsferaRojaMenu eRoja2=new EsferaRojaMenu();
+   
 
       
     /**

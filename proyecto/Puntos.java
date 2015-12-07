@@ -12,11 +12,11 @@ import java.awt.Color;
 public class Puntos extends Actor
 {
    
-    private CounterP puntos;
+    private Counter puntos;
     /**este codigo lo vi en clases  */
     public Puntos()
     {
-        puntos = new CounterP("Puntos:");
+        puntos = new Counter("Puntos:");
         
 
     }

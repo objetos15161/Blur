@@ -8,12 +8,12 @@ import greenfoot.*;
  * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
-public class Barra22 extends Barra2
+public class BarraGiraIzquierda extends BarraGiraDerecha
 {
      /**hereda de la barra2 y redifine la Metodo girar  */
    private SimpleTimer tiempoG;
    private SimpleTimer tiempoC;
-   public Barra22()
+   public BarraGiraIzquierda()
    {
        tiempoC=new SimpleTimer();
        tiempoG=new SimpleTimer();

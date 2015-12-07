@@ -7,13 +7,13 @@ import greenfoot.*;
  * @Author2 (Oscar de la Torre Hernandez) 
  * @version (14/noviembre/2015)
  */
-public class Barra2 extends Barra
+public class BarraGiraDerecha extends Barra
 {
     /** Hereda los metodos de la barra y redifine el metodo caer  */
   
       private SimpleTimer tiempoG;
    private SimpleTimer tiempoC;
-   public Barra2()
+   public BarraGiraDerecha()
    {
        tiempoC=new SimpleTimer();
        tiempoG=new SimpleTimer();

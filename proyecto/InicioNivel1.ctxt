@@ -1,17 +1,15 @@
 #BlueJ class context
-comment0.target=InicioNivel1
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ AyudWorld\ here.\r\n\ \r\n\ @Author1\ (Rafael\ Renteria\ Gomez)\ \r\n\ @Author2\ (Oscar\ de\ la\ Torre\ Hernandez)\ \r\n\ @version\ (14/noviembre/2015)\r\n
+comment0.params=
+comment0.target=void\ act()
 comment1.params=
-comment1.target=void\ act()
+comment1.target=void\ PonerTexto()
+comment1.text=pone\ el\ texto\ en\ una\ posicion
 comment2.params=
-comment2.target=void\ PonerTexto()
-comment2.text=pone\ el\ texto\ en\ una\ posicion
+comment2.target=InicioNivel1()
 comment3.params=
-comment3.target=InicioNivel1()
+comment3.target=void\ caer()
+comment3.text=Este\ metodo\ solo\ se\ manda\ llamar\ cuando\ el\ juego\ es\ completado
 comment4.params=
-comment4.target=void\ caer()
-comment4.text=Este\ metodo\ solo\ se\ manda\ llamar\ cuando\ el\ juego\ es\ completado
-comment5.params=
-comment5.target=void\ inicio()
-comment5.text=se\ inicia\ el\ tiempo
-numComments=6
+comment4.target=void\ inicio()
+comment4.text=se\ inicia\ el\ tiempo
+numComments=5

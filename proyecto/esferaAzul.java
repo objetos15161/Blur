@@ -12,8 +12,8 @@ public class EsferaAzul extends Actor
 {
     static private final int ROWS = 400;
     static private final int COLS = 600;
-    int rotationalSpeed = 5; /** inicializa la velocidad de rotacion */
-    int radius = 60; // adjust as needed
+    private int rotationalSpeed = 5; /** inicializa la velocidad de rotacion */
+    private int radius = 60; // adjust as needed
     private int vel;
     /**
      * Act - do whatever the esferaRoja wants to do. This method is called whenever

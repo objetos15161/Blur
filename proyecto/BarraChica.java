@@ -9,7 +9,8 @@ import greenfoot.*;
  */
 public class BarraChica extends Barra
 {
-    /**Hereda los metodos de la Barra  */
+    /**Hereda los metodos de la Barra 
+       Aunque es una barra diferente */
     public void act() 
     {
         golpear();
