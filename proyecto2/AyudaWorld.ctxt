@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AyudaWorld()
+comment0.text=Constructor
+comment1.params=
+comment1.target=void\ act()
+comment1.text=Se\ inician\ las\ esferas\ que\ son\ para\ practicar
+comment2.params=
+comment2.target=void\ started()
+comment2.text=Metodo\ para\ que\ la\ tocar\ musica
+comment3.params=
+comment3.target=void\ stopped()
+comment3.text=metodo\ para\ detener\ musica
+numComments=4
