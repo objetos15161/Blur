@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CreditosWorld()
+comment0.text=Mundo\ que\ pregunta\ si\ desea\ intentar\ de\ nuevo\ el\ nivel\ o\ regresar\ al\ menu
+comment1.params=
+comment1.target=void\ act()
+comment1.text=serie\ de\ transiciones
+comment2.params=
+comment2.target=void\ started()
+comment2.text=metodos\ por\ que\ funciones\ solo\ en\ c++\ para\ la\ musica
+comment3.params=
+comment3.target=void\ stopped()
+numComments=4

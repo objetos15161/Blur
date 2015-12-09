@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Reloj()
+comment0.text=este\ codigo\ lo\ vi\ en\ clases
+comment1.params=mundo
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment1.text=Se\ agrega\ al\ mundo\ antes\ de\ que\ este\ se\ cree
+comment2.params=
+comment2.target=void\ act()
+comment2.text=por\ cada\ milisegundos\ se\ le\ agrega\ 1\ al\ valor\ del\ timer
+numComments=3
